@@ -87,15 +87,16 @@ void EnQueue(int val)
 
 void DeQueue()
 {
-    while(isEmpty1())
+    if(isEmpty1())
     {
         cout<<"Queue is Empty"<<endl;
-        break;
     }
-
-    int res= Attop1();
-    pop1();
-    cout<<"Deleted Element: "<<res<<endl;
+   else
+   {
+      int res= Attop1();
+      pop1();
+      cout<<"Deleted Element: "<<res<<endl;     
+   }    
 }
 
 int main()
